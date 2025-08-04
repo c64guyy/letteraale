@@ -1,0 +1,259 @@
+/* -------- Stile generale -------- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fffafc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffe3ec;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* -------- Timeline -------- */
+  .timeline {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+  }
+  
+  /* -------- Evento come cartolina -------- */
+  .event {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fffdfb;
+    border: 4px double #ffb6c1;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .event:hover {
+    transform: rotate(-1deg) scale(1.02);
+  }
+  
+  .event img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .event h3 {
+    margin: 0;
+    color: #ff6b81;
+  }
+  
+  .details {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .details img {
+    margin: 5px 0;
+    border-radius: 8px;
+  }
+  
+  /* -------- Pagina di benvenuto -------- */
+  .welcome-body {
+    background: linear-gradient(to bottom right, #ffe4ec, #ffd6f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+  }
+  
+  .enter-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #ff6b81;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s;
+  }
+  
+  .enter-button:hover {
+    background-color: #ff4e68;
+  }
+
+/* -------- Evento stile polaroid -------- */
+.event {
+    width: 260px;
+    background: white;
+    padding: 10px 10px 40px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+  }
+  
+  .event:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .event img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .event h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    color: #333;
+    font-style: italic;
+    padding: 0 10px;
+  }
+  
+  .details {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .hearts-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff69b4;
+    transform: rotate(45deg);
+    animation: float 10s linear infinite, pulse 2s ease-in-out infinite;
+    opacity: 0.6;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff69b4;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  
+  @keyframes float {
+    0% {
+      top: 100%;
+      left: calc(10% + 20px * var(--i));
+    }
+    100% {
+      top: -10%;
+      left: calc(10% + 20px * var(--i));
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1) rotate(45deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(45deg);
+    }
+  }
+  
+  /* Posizioni random per le varie istanze */
+  .heart:nth-child(1) { --i: 1; animation-delay: 0s; }
+  .heart:nth-child(2) { --i: 3; animation-delay: 2s; }
+  .heart:nth-child(3) { --i: 5; animation-delay: 4s; }
+  .heart:nth-child(4) { --i: 7; animation-delay: 6s; }
+  .heart:nth-child(5) { --i: 9; animation-delay: 8s; }
+
+  
+  .lettera-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #fff0f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #4b2b63;
+  }
+  
+  .lettera-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #9333ea;
+  }
+  
+  .lettera-container p {
+    white-space: pre-line;
+  }
+
+  .conclusione-container {
+    text-align: center;
+    margin: 40px auto;
+  }
+  
+  .conclusione-button {
+    background: #9333ea;
+    color: white;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .conclusione-button:hover {
+    background: #a855f7;
+    transform: scale(1.05);
+  }
+
+  
